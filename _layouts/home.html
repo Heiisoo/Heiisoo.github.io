@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Article" }}</h2>
+
+    <ul class="post-list" >
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link for-a wow fadeIn" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        <img src="{{post.images}}" width="25%"/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo euismod risus eu fringilla. Phasellus quis mauris efficitur, accumsan ligula et, pretium nibh. Pellentesque tristique iaculis diam ac consectetur. Donec bibendum venenatis pellentesque. Pellentesque diam massa, venenatis et volutpat ut, vulputate at ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer porta scelerisque massa, sit amet molestie ipsum tempus sed. Quisque consectetur sapien eros, id sollicitudin orci aliquam quis. In sagittis vehicula nunc, quis varius justo ullamcorper et. Ut ex arcu, pretium et mauris tincidunt, </p>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+
+
+
+
+
+
+
+
+<style>
+  body{
+    background: #005AA7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+</style>
