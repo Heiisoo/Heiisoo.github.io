@@ -1,6 +1,7 @@
 ---
 title: Contact
+permalink: "/contact/"
 layout: default
-permalink: /contact/
 ---
+
 Vous pouvez me contacter a cette adresse.
