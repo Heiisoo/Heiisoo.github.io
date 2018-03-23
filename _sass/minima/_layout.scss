@@ -248,7 +248,25 @@
   transition: 1.5s all;
 }
 
+.presentation h1 {
+  margin: 40px;
+}
 
+.presentation p {
+  margin-top: 35px;
+  font-size: 15px;
+}
+
+.container {
+  margin-top: 155px;
+}
+
+.presentation h3 {
+  font-size: 30px;
+  border-bottom: 2px solid #333;
+  border-left: 2px solid #333;
+  width: 165px;
+}
 /**
  * Posts
  */
